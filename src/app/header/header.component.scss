@@ -1,0 +1,45 @@
+.header-container {
+    &__header {
+        margin-left: 40px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header > div {
+        height: 20vh;
+    }
+    &__logo img {
+        width: 158px;
+        height: 58px;
+    }
+    &__nav {
+        display: flex;
+        line-height: 65px;
+    }
+    &__options {
+        display: flex;
+        margin-right: 80px;
+    }
+    &__nav--items {
+        padding: 0px 25px;
+        font-family: sans-serif;
+    }
+    &__nav--login {
+        line-height: 65px;
+        font-family: sans-serif;
+    }
+    &__nav--get-started {
+        border: 2px solid black;
+        border-radius: 30px;
+        width: 130px;
+        text-align: center;
+        line-height: 42px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+    &__options--get-started {
+        padding-top: 10px;
+        margin-left: 20px;
+    }
+}

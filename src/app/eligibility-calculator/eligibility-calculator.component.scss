@@ -1,0 +1,140 @@
+.ec-container {
+    margin: 50px 15px 15px 15px;
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 75vh;
+    }
+    &__column {
+        // border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 48%;
+        &--left {
+            margin: auto 0;
+            padding: 20px;
+            &-top {
+                font-family: arial;
+                font-size: 52px;
+                font-weight: 600;
+            }
+            &-bottom {
+                font-family: arial;
+                font-size: 22px;
+                padding-top: 28px;
+            }
+        }
+        &--right {
+            margin: auto 0;
+            padding: 20px 0px 20px 0px;
+            display: flex;
+            &-left {
+                display: block;
+                // border: 2px solid red;
+                height: 420px;
+                width: 65%;
+                border-radius: 10px;
+                background-color: white;
+            }
+            &-right {
+                display: flex;
+                // border: 2px solid green;
+                height: 350px;
+                width: 35%;
+                margin: auto 0;
+                border-radius: 0px 10px 10px 0px;
+                background-color: #6a389c;
+            }
+        }
+    }
+    &__column--label-ec {
+        font-size: 20px;
+        height: 50px;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: #f5f5f0;
+        min-width: -webkit-fill-available;
+        text-align: center;
+        border-radius: 10px 10px 0px 0px;
+    }
+    // &__monthly-income-container {
+    //     background-color: white;
+    // }
+    &__monthly-income {
+        padding: 20px;
+        display: grid;
+    }
+    &__monthly-income-label {
+        width: 93%;
+    }
+    &__income-slider {
+        display: flex;
+        padding-top: 10px;
+    }
+    &__pi-icon {
+        width: 10%;
+    }
+    &__pi-slider {
+        width: 80%;
+        padding-right: 15px;
+        padding-top: 5px;
+    }
+    &__monthly-expense {
+        padding: 0px 20px 10px 20px;
+        display: grid;
+        &-label {
+        }
+    }
+    &__eligibility {
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        display: block;
+    }
+    &__loan {
+        padding: 20px;
+    }
+    &__lable-text {
+        padding: 5px;
+        color: #d1c2e0;
+        font-size: 18px;
+    }
+    &__lable-value {
+        padding: 5px;
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    &__nav--get-money {
+        border: 2px solid white;
+        border-radius: 30px;
+        width: 130px;
+        text-align: center;
+        line-height: 42px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: sans-serif;
+        background-color: white;
+        color: #6a389c;
+    }
+    &__label--get-money {
+        padding-top: 10px;
+        margin-left: 20px;
+    }
+}
+
+input {
+    padding: 5px;
+    margin: 5px 0;
+    outline: none;
+}
+input {
+    border-color: transparent;
+    border-bottom: 2px solid #1c87c9;
+}
+
+hr {
+    width: 90%;
+}

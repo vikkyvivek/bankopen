@@ -1,0 +1,111 @@
+<div id="eligibility-calculator-component" class="ec-container">
+    <div class='ec-container__row'>
+        <div class='ec-container__column'>
+            <div class='ec-container__column--left'>
+                <div class="ec-container__column--left-top">
+                    Smart loans for smart business like yours
+                </div>
+                <div class="ec-container__column--left-bottom">
+                    Apply for collateral free term loan in minutes & scale your businees like never before
+                </div>
+            </div>
+        </div>
+        <div class='ec-container__column'>
+            <div class='ec-container__column--right'>
+                <div class="flex-65 ec-container__column--right-left">
+                    <div class="ec-container__column--label-ec">
+                        Eligibility Calculator
+                    </div>
+                    <div id="monthly-income" class="ec-container__monthly-income-container">
+                        <div class="ec-container__monthly-income">
+                            <div class="ec-container__monthly-income-label">
+                                <span style="float: left">Monthly Income</span> <span
+                                    style="float: right;border-bottom: 1px solid gray">{{income}}</span>
+                            </div>
+                            <div class="ec-container__income-slider">
+                                <div class="flex-10 ec-container__pi-icon" (click)="handleSliderClick('income',-500)"><span class="pi pi-minus-circle"></span>
+                                </div>
+                                <div class="flex-80 ec-container__pi-slider">
+                                    <p-slider [(ngModel)]="income" [min]="10000" [max]="100000" (onChange)="handleChange($event)"></p-slider>
+                                </div>
+                                <div class="flex-10 ec-container__pi-icon" (click)="handleSliderClick('income',500)"><span class="pi pi-plus-circle"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="ec-container__monthly-expense">
+                            <div class="ec-container__monthly-expense-label">
+                                <span style="float: left">Monthly Expense</span>
+                            </div>
+                            <div>
+                                <input type="number" [min]="5000" [(ngModel)]="expense" (change)="handleChange($event)" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div id="repayment-tenure">
+                        <div class="ec-container__monthly-income">
+                            <div class="ec-container__monthly-income-label">
+                                <span style="float: left">Repayment Tenure</span> <span
+                                    style="float: right; border-bottom: 1px solid gray">{{months}} months</span>
+                            </div>
+                            <div class="ec-container__income-slider">
+                                <div class="flex-10 ec-container__pi-icon" (click)="handleSliderClick('months',-1)"><span class="pi pi-minus-circle"></span>
+                                </div>
+                                <div class="flex-80 ec-container__pi-slider">
+                                    <p-slider [(ngModel)]="months" [min]="6" [max]="36" (onChange)="handleChange($event)"></p-slider>
+                                </div>
+                                <div class="flex-10 ec-container__pi-icon" (click)="handleSliderClick('months',1)"><span class="pi pi-plus-circle"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="ec-container__monthly-expense">
+                            <div class="ec-container__monthly-expense-label">
+                                <span style="float: left">Any Existing Loans?</span>
+                                <span style="float: right">
+                                    <p-inputSwitch [(ngModel)]="checked" (onChange)="handleToggleChange($event)"></p-inputSwitch>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div *ngIf="checked" class="ec-container__monthly-expense">
+                            <div class="ec-container__monthly-expense-label">
+                                <span style="float: left">What is Your Current EMI?</span>
+                            </div>
+                            <div>
+                                <input type="number" [(ngModel)]="currentEmi" (change)="handleChange($event)"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex-35 ec-container__column--right-right">
+                    <div class="ec-container__eligibility">
+                        <div class="ec-container__loan">
+                            <div class="ec-container__lable-text">
+                                Loan Amount
+                            </div>
+                            <div class="ec-container__lable-value">
+                                ₹ {{loanAmount}}
+                            </div>
+                        </div>
+                        <div class="ec-container__loan">
+                            <div class="ec-container__lable-text">
+                                Your EMI will be
+                            </div>
+                            <div class="ec-container__lable-value">
+                                ₹ {{emi}}
+                            </div>
+                        </div>
+
+                        <div class="ec-container__label--get-money">
+                            <div class="ec-container__nav--get-money">GET MONEY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
